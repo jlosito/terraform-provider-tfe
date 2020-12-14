@@ -80,7 +80,7 @@ func resourceTFEVariable() *schema.Resource {
 				ForceNew: true,
 				ValidateFunc: validation.StringMatch(
 					workspaceIdRegexp,
-					"must be the workspace's external_id",
+					"must be the workspace's immutable ID, which looks like ws-<RANDOM STRING>",
 				),
 			},
 		},
